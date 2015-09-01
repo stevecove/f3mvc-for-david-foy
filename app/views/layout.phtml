@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>MVC Test (hint - maybe i should be set in code somewhere?)</title>
+    </head>
+    <body>
+
+        <!-- header-->
+        <h1>I show on every page that user layout.phtml in the controllers beforeRoute method</h1>
+        <p>Normally this would be the page header, logo, menu etc</p>
+        <!-- /header-->
+
+        <!-- this is where we pull in the individual page template, set in the controller method-->
+        <F3:include if="{{ isset(@content) }}" href="{{ @content }}"/>
+
+        <!--footer-->
+        <p>Footer stuff, including javascript etc</p>
+        <!-- /footer-->
+    </body>
+</html>

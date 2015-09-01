@@ -1,0 +1,25 @@
+<h1>This ius a list of cards in the {{ @category }} category</h1>
+
+<table>
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Image</th>
+        <th>Quantity</th>
+        <th>Link</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <F3:repeat group="{{ @cardList }}" value="{{ @card }}">
+        <tr>
+            <td>{{ @card['name'] }}</td>
+            <td><img src="{{ @card['image'] }}"/></td>
+            <td>{{ @card['quantity'] }}</td>
+            <td><a href="/card/{{ @card['id'] }}">View card</a></td>
+        </tr>
+    </F3:repeat>
+
+    </tbody>
+</table>
+
